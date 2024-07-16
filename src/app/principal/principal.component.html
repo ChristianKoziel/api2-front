@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <form>
+        <img src="assets/user.png" alt="User Image" class="img-fluid">
+
+        <div class="mb-3">
+            <input type="text" placeholder="Nome" class="form-control">
+        </div>
+        <div class="mb-3 row">
+            <div class="col-sm-6">
+                <input type="number" placeholder="Idade" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                <input type="number" placeholder="Telefone" class="form-control">
+            </div>
+        </div>
+        <div class="mb-3">
+            <input type="text" placeholder="Cidade" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <input type="button" value="Cadastrar" class="btn btn-primary">
+            <input type="button" value="Editar" class="btn btn-warning">
+            <input type="button" value="Excluir" class="btn btn-danger">
+            <input type="button" value="Cancelar" class="btn btn-secondary">
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nomes</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+                <th>Telefone</th>
+                <th>Selecionar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.idade }}</td>
+                <td>{{ cliente.cidade }}</td>
+                <td>{{ cliente.telefone }}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary">Selecionar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
